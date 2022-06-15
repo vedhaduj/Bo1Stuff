@@ -8,6 +8,10 @@ BOOL WINAPI DllMain(HINSTANCE hMod, DWORD dwReason, LPVOID lpReserved)
 	{
 	case DLL_PROCESS_ATTACH:
 		
+			//This doesn't work for when your holding grenades
+			//for example it basically doesn't a check to see if health is less than or equal to zero
+			//so basically it will call the death function
+			//Just like in assault cube cause your standing in the middle of a grenade so ofc you are dead..
 		VirtualProtect(ammohook, 3, PAGE_EXECUTE_READWRITE, &oldprotection);
 		//health
 		*healthhook = 0x90;
