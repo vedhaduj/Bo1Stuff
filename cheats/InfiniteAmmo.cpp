@@ -2,7 +2,7 @@
 #include <Windows.h>
 
 //this is if you want to repatch the bytes
-
+/*
 if (!ammo)
 	{
 		*hook = 0x89;
@@ -14,6 +14,7 @@ if (!ammo)
 	// for (int i = 0; i < sizeof(ammorepatched); i++) {
         //*(hook + i) = hook[i];
 	}
+*/
 
 BOOL WINAPI DllMain(HINSTANCE hMod, DWORD dwReason, LPVOID lpReserved)
 {
